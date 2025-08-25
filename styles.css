@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+.nav-bar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background: aqua;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.35rem 0.75rem;
+}
+.nav-bar {
+  background: orange;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar a {
+    display: inline-block;
+    background: none;
+    transition: all 0.3s linear;
+  }
+  .nav-bar a:hover {
+    color: aliceblue;
+    transform: scale(1.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+  }
+  .nav-bar {
+    height: 5rem;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .nav-bar ul {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+header {
+  height: calc(100vh - 5rem);
+  background: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.banner-btn {
+  padding: 0.75rem 1.75rem;
+  background: orange;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 0.35rem;
+  transition: 0.3s all linear;
+}
+.banner-btn:hover {
+  color: orange;
+  background: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+h1,
+h2 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+h1 {
+  color: rgb(173, 133, 21);
+  font-size: 3rem;
+}
+h2 {
+  color: rgb(116, 101, 101);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url("./herop.jpg");
+    h2 {
+      color: rgb(223, 190, 190);
+    }
+  }
+}
+.content-divider {
+  height: 0.5rem;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    orange,
+    rgb(194, 171, 171),
+    rgb(153, 102, 24),
+    rgb(207, 192, 192),
+    orange
+  );
+}
+.section-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.section-title {
+  text-align: center;
+}
+.banner-img {
+  height: 17rem;
+  object-fit: cover;
+}
+.single-product {
+  background: aliceblue;
+  margin-bottom: 2rem;
+  border-radius: 0.35rem;
+}
+.single-product h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+.banner-info {
+  margin: 2rem 0.5rem;
+  text-align: center;
+}
+.banner-info p {
+  max-width: 27rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.banner-img {
+  position: relative;
+  border-top-left-radius: 0.35rem;
+  border-top-right-radius: 0.35rem;
+}
+.img {
+  position: relative;
+}
+.date {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0.35rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5));
+  color: white;
+}
+.products-center {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 576px) {
+  .products-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .products-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
